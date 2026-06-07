@@ -79,7 +79,7 @@ fetch() {
     local url="$2"
     local archive="$3"
     if [[ ! -f "$archive" ]]; then
-        curl -fL --retry 3 "$url" -o "$archive"
+        curl -fL --retry 3 "$url" -o "$archive" || true
     fi
 }
 
